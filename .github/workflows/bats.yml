@@ -19,4 +19,4 @@ jobs:
   my-testing-second-job:
     runs-on: ubuntu-latest
     steps: 
-      - run: "echo second"
+      - run: "echo second ${{github.event.inputs.version}}"
