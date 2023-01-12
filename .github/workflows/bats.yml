@@ -16,3 +16,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+  my-testing-second-job:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: "echo second"
