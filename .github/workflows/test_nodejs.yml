@@ -21,8 +21,8 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const core = require('@actions/core');
-            console.log(core.getInput('message');
+            const ghCore = require('@actions/core');
+            console.log(ghCore.getInput('message');
       - run: git config --global user.email "kiritosato@gmail.com"
       - run: git config --global user.name "titusefferian"
       - run: git add .
