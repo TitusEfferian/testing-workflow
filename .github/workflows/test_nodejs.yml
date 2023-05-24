@@ -28,7 +28,7 @@ jobs:
 #            const myCore = require('@actions/core');
 #            const message = myCore.getInput('message');
 #            console.log(message);
-      - run: echo "The value of dummy_value is:${{ env }}"
+      - run: echo "The value of dummy_value is:${{ env.toString() }}"
 
       - run: git config --global user.email "kiritosato@gmail.com"
 
