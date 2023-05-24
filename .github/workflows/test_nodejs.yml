@@ -26,7 +26,7 @@ jobs:
         with:
           script: |
             const myCore = require('@actions/core');
-            console.log(myCore.getInput('message');
+            console.log(myCore.getInput('message'));
 
       - run: git config --global user.email "kiritosato@gmail.com"
 
