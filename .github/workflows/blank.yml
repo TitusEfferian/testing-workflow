@@ -27,3 +27,8 @@ jobs:
 
       - name: Print the message
         run: echo "The message is:${{inputs.myMessage}}"
+      - name: nodejsscript
+        uses: actions/github-script@v1
+        with:
+          script: |
+            console.log('hello this is jebung');
