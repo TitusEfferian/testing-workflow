@@ -15,16 +15,25 @@ jobs:
         with:
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_PASSWORD }}
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+
+      - run: npm install @actions/core
+
       - uses: actions/github-script@v6
         with:
           script: |
-            const ghCore = require('@actions/core');
-            console.log(ghCore.getInput('message'));
+            const myCore = require('@actions/core');
+            console.log(myCore.getInput('message');
+
       - run: git config --global user.email "kiritosato@gmail.com"
+
       - run: git config --global user.name "titusefferian"
+
       - run: git add .
+
       - run: git commit -m "commit"
+
       - run: git push origin main
