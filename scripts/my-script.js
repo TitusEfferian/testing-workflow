@@ -1,5 +1,4 @@
-fetch('https://pokeapi.co/api/v2/pokemon/1')
-.then(x=>x.json())
-.then(x=>{
-  console.log(x)
-})
+const fs = require('fs');
+
+// Write the updated contents of the file.
+fs.writeFileSync('data.txt', "1");
