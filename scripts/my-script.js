@@ -1,4 +1,4 @@
 const fs = require('fs');
-
-// Write the updated contents of the file.
-fs.writeFileSync('data.txt', process.env.MESSAGE);
+const message = process.env.MESSAGE;
+const buffer = Buffer.from(message);
+fs.writeFileSync('data.txt', buffer);
