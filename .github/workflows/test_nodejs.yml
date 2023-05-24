@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: 18
       - run: node scripts/my-script.js
+      - run: git config --global user.email "kiritosato@gmail.com"
+      - run: git config --global user.name "titusefferian"
       - run: git add .
       - run: git commit -m "commit"
       - run: git push origin main
