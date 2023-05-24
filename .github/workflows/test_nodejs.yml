@@ -6,6 +6,7 @@ on:
       message:
         description: The message to be printed.
         type: string
+        required: true
 
 jobs:
   build:
