@@ -1,0 +1,17 @@
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v3
+
+      - run: npm install
+
+      - run: npm run test
+      
+      - run: node -e "console.log('Hello, world!')"
