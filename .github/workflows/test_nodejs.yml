@@ -1,4 +1,4 @@
-name: test nodejs
+name: Dispatch workflow
 
 on:
   workflow_dispatch:
