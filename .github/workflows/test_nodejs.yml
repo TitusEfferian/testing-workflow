@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_PASSWORD }}
 
-      - run: echo "${{ github.event.inputs.message }}"
+      - run: echo "${{ github.event.inputs.message }}" > dummy.txt
 
       - run: git config --global user.email "kiritosato@gmail.com"
 
