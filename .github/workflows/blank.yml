@@ -24,6 +24,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-      # runs get inpt value
+
       - name: Print the message
-        run: echo "The message is: ${{inputs.myMessage}}"
+        run: echo "The message is:${{inputs.myMessage}}"
