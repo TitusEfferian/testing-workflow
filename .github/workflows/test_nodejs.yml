@@ -16,19 +16,7 @@ jobs:
           username: ${{ secrets.GITHUB_USERNAME }}
           password: ${{ secrets.GITHUB_PASSWORD }}
 
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: 18
-
-#       - run: npm install @actions/core
-
-#       - uses: actions/github-script@v6
-#         with:
-#           script: |
-#            const myCore = require('@actions/core');
-#            const message = myCore.getInput('message');
-#            console.log(message);
-      - run: echo "The value of dummy_value is:${{ env.INPUT_MESSAGE }}"
+      - run: echo "${{ github.event.inputs.message }}"
 
       - run: git config --global user.email "kiritosato@gmail.com"
 
