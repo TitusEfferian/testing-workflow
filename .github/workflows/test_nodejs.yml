@@ -25,8 +25,9 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
+            const fs = require('fs');
             const myCore = require('@actions/core');
-            console.log(myCore.getInput('message'));
+            fs.writeFileSync('dummy.txt', String(myCore.getInput('message')));
 
       - run: git config --global user.email "kiritosato@gmail.com"
 
