@@ -22,7 +22,7 @@ jobs:
         with:
           script: |
             const ghCore = require('@actions/core');
-            console.log(ghCore.getInput('message');
+            console.log(ghCore.getInput('message'));
       - run: git config --global user.email "kiritosato@gmail.com"
       - run: git config --global user.name "titusefferian"
       - run: git add .
