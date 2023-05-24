@@ -10,7 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  
     steps:
       - uses: actions/checkout@v3
         with:
@@ -19,7 +18,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: node scripts/my-script.js
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            const core = require('@actions/core');
+            console.log(core.getInput('message');
       - run: git config --global user.email "kiritosato@gmail.com"
       - run: git config --global user.name "titusefferian"
       - run: git add .
