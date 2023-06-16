@@ -16,6 +16,8 @@ jobs:
       - uses: actions/github-script@v6
         env: 
           nama: ${{ secrets.MY_SECRET }}
+          my_var: $MY_VAR
         with:
           script: |
             console.log(process.env.nama);
+            console.log(process.env.my_var);
