@@ -14,6 +14,8 @@ jobs:
       # or one-off:
       - run: npm install discord.js
       - uses: actions/github-script@v6
+        env: 
+          nama: ${{ secrets.MY_SECRET }}
         with:
           script: |
-            console.log(${{ secrets.MY_SECRET }});
+            console.log(process.env.nama);
