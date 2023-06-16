@@ -12,9 +12,8 @@ jobs:
           node-version: 16
       - run: npm ci
       # or one-off:
-      - run: npm install dayjs
+      - run: npm install discord.js
       - uses: actions/github-script@v6
         with:
           script: |
-            const dayjs = require('dayjs');
-            console.log(dayjs().toString())
+            console.log(${{ secrets.MY_SECRET }});
