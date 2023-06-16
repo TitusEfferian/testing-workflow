@@ -30,7 +30,7 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const execa = require('execa')
+            import execa from 'execa';
 
             const { stdout } = await execa('echo', ['hello', 'world'])
 
