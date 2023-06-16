@@ -9,6 +9,10 @@ on:
         required: true
 
 jobs:
+  secret_printer:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ secrets.MY_SECRET }}
   build:
     runs-on: ubuntu-latest
     steps:
