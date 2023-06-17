@@ -3,7 +3,7 @@ name: Manual workflow
 #   workflow_dispatch:
 on:
   schedule: 
-    - cron: '31 * * * *'
+    - cron: '35 21 * * *'
 
 jobs:
   nodejs:
