@@ -1,6 +1,9 @@
 name: Manual workflow
+# on:
+#   workflow_dispatch:
 on:
-  workflow_dispatch:
+  schedule: 
+    - cron: '21 * * * *'
 
 jobs:
   nodejs:
