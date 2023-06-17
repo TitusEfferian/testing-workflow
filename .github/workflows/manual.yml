@@ -31,7 +31,9 @@ jobs:
             // We use 'c' for the event parameter to keep it separate from the already defined 'client'
             client.once(Events.ClientReady, async c => {
               console.log(`Ready! Logged in as ${c.user.tag}`);
-              client.channels.cache.get("912576389130125396").send("hello world");
+              client.channels.cache.get("912576389130125396").send("hello world").then(()=>{
+                client.destroy();
+              })
             });
 
             // Log in to Discord with your client's token
