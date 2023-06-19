@@ -3,7 +3,7 @@ name: Manual workflow
 #   workflow_dispatch:
 on:
   schedule: 
-    - cron: '21 2 * * *'
+    - cron: '55 7 * * *'
 #   workflow_dispatch:
 
 jobs:
