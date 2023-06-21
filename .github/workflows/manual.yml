@@ -2,8 +2,6 @@ name: Manual workflow
 # on:
 #   workflow_dispatch:
 on:
-  schedule: 
-    - cron: '30 8 * * *'
   workflow_dispatch:
 
 jobs:
